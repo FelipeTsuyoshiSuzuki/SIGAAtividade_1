@@ -1,0 +1,102 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f7f6e4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Text Views para as datas de nascimento e ingresso -->
+    <TextView
+        android:id="@+id/textViewBirthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:padding="16dp"
+        android:text="Data de nascimento"
+        android:textColor="#5f3711"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEnrollmentDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEnrollmentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:text="Data de ingresso no colégio"
+        android:textColor="#5f3711"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutBirthdate" />
+
+    <!-- Campos de entrada para as datas de nascimento e ingresso -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutBirthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:hint="DD/MM/AAAA"
+        app:boxBackgroundColor="#e2d5c1"
+        app:boxStrokeColor="#d4c098"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="clear_text"
+        app:hintTextColor="#d4c098"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBirthdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBirthdate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextBirthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:textColor="#5f3711"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEnrollmentDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:hint="DD/MM/AAAA"
+        app:boxBackgroundColor="#e2d5c1"
+        app:boxStrokeColor="#d4c098"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="clear_text"
+        app:hintTextColor="#d4c098"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEnrollmentDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnrollmentDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEnrollmentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:textColor="#5f3711"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#e2d5c1"
+        android:text="Salvar"
+        android:textColor="#5f3711"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEnrollmentDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
